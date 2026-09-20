@@ -1,8 +1,8 @@
 # Rafeeq Mini · رفيق ميني
 
-> A bilingual, safe, and auditable **agentic operations assistant** for a fictional delivery company — engineered as a cumulative three-day lab on Colab, with zero API keys and no network.
+_A bilingual agentic operations assistant for a fictional delivery company._
 
-> مساعد عمليات **وكيلي** ثنائي اللغة، آمن وقابل للتدقيق، لشركة توصيل افتراضية — engineered عبر مختبر تراكمي لثلاثة أيام على Colab، دون مفتاح API ودون اتصال بالشبكة.
+_مساعد عمليات وكيلي ثنائي اللغة لشركة توصيل افتراضية._
 
 ![Colab Free CPU](https://img.shields.io/badge/Colab-Free%20CPU-blue)
 ![Deterministic stub](https://img.shields.io/badge/Mode-Deterministic%20stub-lightgrey)
@@ -11,17 +11,73 @@
 
 ---
 
-## About · عن المشروع
+## The project · المشروع
 
-**Rafeeq Mini** demonstrates end-to-end agentic AI systems engineering: it takes a customer request and turns it into a safe, human-overviewable action through a bounded agent flow.
+Rafeeq Mini is a compact, end-to-end demonstration of **agentic AI systems engineering**. It shows how a customer request in Arabic or English can be taken apart, understood, verified, and acted upon by an artificial agent — without a single external API call and with every decision left open to inspection.
 
-**رفيق ميني** يقدّم نموذجًا عمليًا متكاملًا لهندسة أنظمة الذكاء الاصطناعي التوكيلي: يحوّل طلب العميل إلى إجراء آمن وتحت إشراف بشري عبر تدفق وكيلي محدود.
+It is a training simulation built on a **deterministic stub runtime**: fully offline, deterministic, and reproducible, so the entire system — reasoning, memory, tools, and gates — can be studied as pure engineering.
 
-The system understands **intent** in Arabic or English, verifies ownership, retrieves the active **policy**, routes work to a **specialist agent**, and pauses for **documented human approval** on high-value actions. Every step is traceable and every gate is evidenced in JSON.
+> This is a synthetic simulation. It does not contact any real delivery, payment, or customer system.
 
-> **Safety boundary · حد الأمان:** A synthetic training simulation — no real customers, orders, payments, or systems are contacted. · محاكاة تدريبية ببيانات اصطناعية؛ لا تُلمس أنظمة أو بيانات حقيقية.
+---
 
-## Repository structure · بنية المستودع
+## The architecture · المعمارية
+
+The system is a **bounded agent pipeline**: the request flows through typed stages, and at every stage the agent is constrained by explicit state, hard budget limits, and an auditable record.
+
+### Agent flow · مسار الوكيل
+
+```text
+Understand → Verify → Retrieve → Route → Approve → Act → Prove
+فهم        ← تحقق    ← استرجاع  ← توجيه ← موافقة ← تنفيذ ← إثبات
+```
+
+1. **Understand / فهم** — the agent detects the intent and extracts the order number from an Arabic or English message.
+2. **Verify / تحقق** — ownership is checked before anything is read or written; no cross-customer access is possible.
+3. **Retrieve / استرجاع** — the active policy and the order context are loaded from scoped memory.
+4. **Route / توجيه** — the task is handed to a specialist agent through typed handoffs.
+5. **Approve / موافقة** — high-value actions (refunds above the threshold) pause for documented human approval.
+6. **Act / تنفيذ** — the side effect is written once, idempotently, within the tool's narrow schema.
+7. **Prove / إثبات** — the whole run is traced to JSON evidence and a daily gate.
+
+### Core components · المكونات الجوهرية
+
+| Component · المكوّن | Responsibility · المسؤولية |
+|---|---|
+| **Typed learner state** | A bounded state object (route, status, and step counters) that the agent carries between cycles. |
+| **Bounded ReAct cycle** | Repeats _decision → action → observation_ and stops when budget is exhausted or the goal is met. |
+| **Local tools** | Narrow, schema-scoped tools (e.g. `get_delivery_eta`) with read-only guarantees and no unpermitted writes. |
+| **Local MCP server** | A stdio JSON-RPC server exposing the tools through a standard protocol. |
+| **Scoped memory** | Session memory, per-customer recall, and active-policy retrieval. |
+| **Guardrails & approval** | Budget limits (steps / transitions / handoffs / reflections), attack tests, and human gate above SAR 500. |
+| **Evidence layer** | JSONL traces and day-gate reports (`reports/checkpoints/`) that make every run auditable. |
+
+### Budget limits · حدود التشغيل
+
+The agent can never run away: each run is capped at **6 steps**, **12 state transitions**, **2 handoffs**, and **1 reflection** — exceeding any limit stops the cycle safely, not silently.
+
+### Safety invariants · ضوابط السلامة
+
+- **No leakage** — reads are ownership-checked before any retrieval or write.
+- **No stray writes** — writes are single, idempotent, and gated.
+- **No secrets** — all data is synthetic; identifiers are learner IDs only.
+- **Redacted traces** — raw messages, reasoning, and identifiers never appear in logs.
+
+---
+
+## The outcome · النتائج
+
+The project is delivered as a **three-day cumulative lab**: each day builds one layer of the system and closes with a **gate** that verifies the work and writes machine-readable evidence.
+
+| Day · اليوم | Focus · المحور | Gate · البوابة |
+|---|---|---|
+| 1 | Core & bounded single agent · النواة ووكيل محدود | `C9_DAY1_GATE` |
+| 2 | Memory & specialist orchestration · الذاكرة والتنسيق | `C20_DAY2_GATE` |
+| 3 | Security, proving & export · التأمين والإثبات | `C29_EXPORT_SAFETY_CHECK` |
+
+---
+
+## Repository · المستودع
 
 ```text
 rafeeq-mini-<yourname>/
@@ -31,22 +87,8 @@ rafeeq-mini-<yourname>/
     └── Rafeeq_Mini_Capstone.ipynb   ← the executed notebook (final export)
 ```
 
-## Getting started · البدء
-
-Open the cumulative notebook and save a copy in your Drive, then run from the environment doctor through the day gates in order.
-
-افتح الدفتر التراكمي واحفظ نسخة في Drive، ثم شغّل الخلايا من فاحص البيئة حتى بوابات الأيام بالترتيب.
-
-📓 **`Rafeeq_Mini_Capstone.ipynb`** → [Run on Google Colab ↗](https://colab.research.google.com/github/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/notebooks/Rafeeq_Mini_Capstone.ipynb)
-
-## Progress · سجل التقدم
-
-Course progress is documented in [`LEARNING_PROGRESS.md`](LEARNING_PROGRESS.md) at every day gate.
-
-يُوثَّق تقدم الدورة في [`LEARNING_PROGRESS.md`](LEARNING_PROGRESS.md) عند كل بوابة يوم.
-
 ---
 
-**Course · الدورة:** [Advanced Agentic AI Systems Engineering — SDAIA Academy](https://github.com/SDAIAAcademy) · Instructor: Meaad Al-Marri · ميعاد المري
+**Course · الدورة:** *Advanced Agentic AI Systems Engineering* — [SDAIA Academy](https://github.com/SDAIAAcademy) · Instructor: Meaad Al-Marri · ميعاد المري
 
 **License · الترخيص:** © SDAIA Academy — learner submission. No real customer data is used. · تسليم متدرب؛ لا تُستخدم أي بيانات عملاء حقيقية.
