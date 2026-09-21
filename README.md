@@ -81,11 +81,61 @@ The project is delivered as a **three-day cumulative lab**: each day builds one 
 
 ```text
 rafeeq-mini-<yourname>/
-├── README.md                 ← this file
-├── LEARNING_PROGRESS.md      ← progress log (updated at C9, C20, C29)
+├── README.md                    ← project idea, run & use (this file)
+├── LEARNING_PROGRESS.md         ← daily gate progress log (C9, C20, C29)
+├── docs/                        ← linked technical documentation
+│   ├── ARCHITECTURE.md          ← components, flow, data model, safety invariants
+│   ├── NOTEBOOK_MAP.md          ← the 30-section C0→C29 cell map and the 14 learner TODOs
+│   ├── RUNBOOK.md               ← run, test, recover, safe Git path
+│   └── REPORTS_AND_EVIDENCE.md  ← reports, checkpoints, security evidence
+├── reports/checkpoints/         ← machine-readable day-gate evidence
 └── notebooks/
     └── Rafeeq_Mini_Capstone.ipynb   ← the executed notebook (final export)
 ```
+
+## Documentation · التوثيق
+
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — components, flow, data model, budget limits, safety invariants, limitations · المعمارية والمكونات وحدود التشغيل وقواعد السلامة والقيود
+- [`docs/NOTEBOOK_MAP.md`](docs/NOTEBOOK_MAP.md) — the 30-section C0→C29 cell map with the 14 learner TODOs, gates, and learner rules · خريطة خلايا الدفتر C0→C29 ومواقع البوابات وقواعد المتدرب
+- [`docs/RUNBOOK.md`](docs/RUNBOOK.md) — how to run, verify locally, recover, and follow the safe Git path · التشغيل والاختبار والاستعادة ومسار Git الآمن
+- [`docs/REPORTS_AND_EVIDENCE.md`](docs/REPORTS_AND_EVIDENCE.md) — reports, checkpoints, security evidence, and submission requirements · التقارير وأدلة البوابات ومتطلبات التسليم
+- [`LEARNING_PROGRESS.md`](LEARNING_PROGRESS.md) — daily gate progress log · سجل تقدم البوابات اليومية
+
+---
+
+## Run & verify · التشغيل والتحقق
+
+The mandatory path uses **Google Colab Free CPU**: no API key, GPU, terminal, or paid service. All data is synthetic and all refunds are simulated.
+
+1. Open the cumulative notebook from the official course repository with the Colab button, then choose **File → Save a copy in Drive**.
+2. Select the standard CPU runtime and run `C0_ENV_DOCTOR`; continue only when it prints `C0 = READY` and `all_passed=true`.
+3. Run the cells in order C0 → C29, completing each `TODO` and its public check before moving forward.
+4. After C9, C20, and C29, update `LEARNING_PROGRESS.md` with a meaningful commit (see [`docs/RUNBOOK.md`](docs/RUNBOOK.md)).
+5. After C29 prints `FINAL_EXPORT_CREATED`, upload the clean files and wait for the green **Actions → Learner submission quality** check.
+
+### Expected outputs · المخرجات المتوقعة
+
+| Step | Expected marker · العلامة المتوقعة |
+|---|---|
+| `C0_ENV_DOCTOR` | `C0 = READY` · `all_passed=true` · stub runtime |
+| Day gates (`C9`, `C20`) | `all_passed=true` · learner checks 1–14 |
+| Final export (`C29`) | `FINAL_EXPORT_CREATED` · `reports/submission_manifest.json` |
+
+### Verify locally (no install) · التحقق محليًا بدون تثبيت
+
+```bash
+python scripts/doctor.py
+python -m unittest discover -s tests/public -p "test_*.py" -v
+python scripts/validate_notebook.py
+python scripts/run_assessment.py
+python scripts/validate_release.py
+```
+
+### Limitations · القيود
+
+- Supervised engineering simulation, not a production deployment — no real delivery, payment, or customer system is contacted.
+- Deterministic stub runtime — no real LLM, network, or API keys.
+- Use `learner_id` or the GitHub username in public files; real names, emails, IDs, and credentials belong only in the instructor's private hand-in form.
 
 ---
 

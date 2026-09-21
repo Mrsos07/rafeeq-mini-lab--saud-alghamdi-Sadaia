@@ -1,0 +1,23 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+.desktop.ini
+.~lock.*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Local agent tooling
+.opencode/
+.playwright-mcp/
+colab-header-snapshot.yml
+colab-notebook-snapshot.yml
+opencode.json
+
+# Raw evidence stays in Drive/Colab until the guarded final export (C29)
+reports/
+
+# Local learner drafts (not part of the submission)
+تقرير_رفيق_ميني.md
+ملخص_اليوم_الأول_رفيق_ميني.docx
