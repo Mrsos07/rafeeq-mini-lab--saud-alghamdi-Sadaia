@@ -2,5 +2,10 @@
   "thread_id": "session-memory-demo",
   "turn_1_order": "TW-26003",
   "turn_2_recalled_order": "TW-26003",
-  "raw_messages_stored": false
+  "raw_messages_stored": false,
+  "checks": {
+    "two_turn_recall_consistent": true
+  },
+  "note": "raw_messages_stored=false is the required privacy property (reference invariant): scoped references are kept, raw customer content is never persisted.",
+  "all_passed": true
 }
