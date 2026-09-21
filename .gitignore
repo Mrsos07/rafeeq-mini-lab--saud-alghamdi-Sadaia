@@ -37,8 +37,11 @@ opencode.json
 
 # Raw evidence stays in Drive/Colab until the guarded final export (C29).
 # Day checkpoint results under reports/checkpoints/ are tracked as evidence.
+# Full-project JSON outputs (final export manifest + assessment results) are tracked.
 reports/*
 !reports/checkpoints/
+!reports/submission_manifest.json
+!reports/assessment_results.json
 
 # Export archives
 rafeeq-mini-submission.zip
