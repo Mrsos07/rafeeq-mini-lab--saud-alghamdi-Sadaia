@@ -3,10 +3,30 @@ Thumbs.db
 .DS_Store
 .desktop.ini
 .~lock.*
+.idea/
+.vscode/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
 
 # Python
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter and Colab
+.ipynb_checkpoints/
+*.nbconvert.ipynb
 
 # Local agent tooling
 .opencode/
@@ -20,6 +40,17 @@ opencode.json
 reports/*
 !reports/checkpoints/
 
+# Export archives
+rafeeq-mini-submission.zip
+
+# Build and cache output
+dist/
+build/
+.cache/
+coverage/
+.rafeeq-mini/
+
 # Local learner drafts (not part of the submission)
 تقرير_رفيق_ميني.md
-ملخص_اليوم_الأول_رفيق_ميني.docx
+أهم_دروس_اليوم_الثاني_رفيق_ميني.docx
+الملخص_الشامل_دورة_رفيق_ميني.docx

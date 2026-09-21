@@ -1,0 +1,22 @@
+{
+  "day": 3,
+  "suite": "security_retest",
+  "case_id": "L-SEC-09",
+  "weak_baseline_exposed": true,
+  "repaired_guard_passed": true,
+  "baseline": {
+    "suite": "baseline",
+    "passed": 8,
+    "total": 8
+  },
+  "assessment": {
+    "functional_case_count": 8,
+    "functional_passed": 8,
+    "security_case_count": 8,
+    "security_passed": 8,
+    "unauthorized_writes": 0,
+    "trace_events": 214
+  },
+  "critical_gates_all_true": true,
+  "reflection_bound": true
+}
