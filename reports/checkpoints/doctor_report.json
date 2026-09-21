@@ -1,0 +1,26 @@
+{
+  "all_passed": true,
+  "api_key_required": false,
+  "free_disk_mb": 89457,
+  "llm_mode": "stub",
+  "network_required": false,
+  "payload_files": 94,
+  "python": "3.13.15",
+  "python_ok": true,
+  "required_files_ok": true,
+  "runtime": {
+    "limits": {
+      "handoffs": 2,
+      "reflections": 1,
+      "steps": 6,
+      "transitions": 12
+    },
+    "llm_mode": "stub",
+    "memories_loaded": 8,
+    "network_required": false,
+    "orders_loaded": 24,
+    "policies_loaded": 6,
+    "status": "ready"
+  },
+  "workspace_writable": true
+}

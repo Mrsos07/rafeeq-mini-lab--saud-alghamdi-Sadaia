@@ -15,8 +15,10 @@ colab-header-snapshot.yml
 colab-notebook-snapshot.yml
 opencode.json
 
-# Raw evidence stays in Drive/Colab until the guarded final export (C29)
-reports/
+# Raw evidence stays in Drive/Colab until the guarded final export (C29).
+# Day checkpoint results under reports/checkpoints/ are tracked as evidence.
+reports/*
+!reports/checkpoints/
 
 # Local learner drafts (not part of the submission)
 تقرير_رفيق_ميني.md
