@@ -37,10 +37,26 @@
 
 ## Day 2 · اليوم الثاني — Memory & specialist orchestration
 
-- **Status · الحالة:** ⬜ PENDING / قيد التنفيذ
+- **Status · الحالة:** ✅ PASSED / مجتاز
 - **Gate · البوابة:** `C20_DAY2_GATE`
+- **Result · النتيجة:** `all_passed = true` — `public_tests_passed: true` · `learner_checks: 6–10 ✅`
+- **Learner TODOs:** TODO 6 (session summary), TODO 7 (scoped learner memory filter), TODO 8 (policy query + filters), TODO 9 (typed delegation), TODO 10 (refund policy gates) — all complete.
+- **Evidence · الأدلة:**
+  - [`reports/checkpoints/day2_results.json`](reports/checkpoints/day2_results.json)
+  - [`reports/checkpoints/day2_memory_results.json`](reports/checkpoints/day2_memory_results.json)
 
-_To be completed at the Day 2 gate._
+| Check · الفحص | Result · النتيجة |
+|---|---|
+| Day 1 context restored (`C10 = READY`) | ✅ `RESTORE_CONTEXT_READY` |
+| Session memory demo (C11) | ✅ route `refund` · order `TW-26003` |
+| Training dataset memory scope (C12) | ✅ recall = `MEM-004` only |
+| Policy retriever hits (C13) | ✅ `REF-03-AR` / `2026.1` |
+| Orders/refund specialist cases (C14–C15) | ✅ agents + supervisor routes |
+| Handoff construction (C16) | ✅ typed delegation |
+| Plan deviation / approval demo (C17–C19) | ✅ `needs_approval` → `approved` |
+| Learner summary/scope/policy/delegation/refund (TODO 6–10) | ✅ 6–10 |
+| Memory scope / Routing / Refund gate / Reflection bound tests | ✅ 4/4 |
+| Day 2 gate · بوابة اليوم الثاني | ✅ `all_passed: true` |
 
 ---
 
