@@ -1,64 +1,6 @@
 {
   "day": 3,
-  "public_tests_passed": true,
-  "learner_checks_complete": true,
-  "all_passed": true,
-  "learner_checks": {
-    "11": true,
-    "12": true,
-    "13": true
-  },
-  "baseline": {
-    "suite": "baseline",
-    "passed": 8,
-    "total": 8
-  },
-  "adversarial_retest": {
-    "case_id": "L-SEC-09",
-    "weak_baseline_exposed": true,
-    "repaired_guard_passed": true
-  },
-  "reflection_audit": {
-    "low_impact_reflections": 0,
-    "high_impact_reflections": 1
-  },
-  "secure_memory_audit": {
-    "records": 60,
-    "required_fields": true,
-    "redacted": true,
-    "no_forbidden_keys": true,
-    "parent_links_valid": true,
-    "reflection_bound": true
-  },
-  "optimization": {
-    "name": "current_policy_cache",
-    "iterations": 500,
-    "before_ms": 1.666,
-    "after_ms": 0.223,
-    "cache_hits": 499,
-    "cache_misses": 1,
-    "key_fields": ["locale", "category", "active_policy_version"],
-    "customer_data_in_key": false,
-    "evidence_note_length": 235
-  },
-  "assessment": {
-    "functional_case_count": 8,
-    "functional_passed": 8,
-    "pass_rate": 1.0,
-    "route_accuracy": 1.0,
-    "outcome_accuracy": 1.0,
-    "security_case_count": 8,
-    "security_passed": 8,
-    "security_pass_rate": 1.0,
-    "unauthorized_writes": 0,
-    "median_latency_ms": 1.738,
-    "p95_latency_ms": 2.301,
-    "max_steps": 4,
-    "max_reflections": 1,
-    "trace_events": 214,
-    "public_tests_passed": true,
-    "estimated_model_cost_sar": 0.0
-  },
+  "ready": true,
   "critical_gates": {
     "functional_cases_pass": true,
     "security_cases_pass": true,
@@ -72,30 +14,16 @@
     "optimization_safe_and_effective": true,
     "public_tests_pass": true
   },
-  "dashboard": "/content/rafeeq-mini/reports/monitoring_dashboard.png",
-  "renderer": "matplotlib",
-  "readiness": {
-    "day": 3,
-    "ready": true,
-    "learner_checks": {
-      "11": true,
-      "12": true,
-      "13": true
-    }
+  "learner_checks": {
+    "11": true,
+    "12": true,
+    "13": true
   },
-  "final_export": {
-    "created": true,
-    "export_id": "export-d00ab0a4431be69e",
-    "assessment_run_id": "run-68643c9545a84b47",
-    "zip": "/content/rafeeq-mini/rafeeq-mini-submission.zip",
-    "zip_bytes": 359971,
-    "files": 96,
-    "missing_outputs": [],
-    "forbidden_paths": [],
-    "secret_findings": []
-  },
-  "notebook_fix": {
-    "issue": "cell61 key mismatch: panel read _critical_gates['trace_redaction'] while defined key was 'trace_redacted'",
-    "fixed": true
-  }
+  "artifacts": [
+    "SECURITY_ASSESSMENT.md",
+    "PROJECT_REPORT.md",
+    "assessment_results.json",
+    "monitoring_dashboard.png",
+    "trace.jsonl"
+  ]
 }

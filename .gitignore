@@ -1,11 +1,3 @@
-# OS / editor
-Thumbs.db
-.DS_Store
-.desktop.ini
-.~lock.*
-.idea/
-.vscode/
-
 # Secrets and local configuration
 .env
 .env.*
@@ -28,22 +20,15 @@ venv/
 .ipynb_checkpoints/
 *.nbconvert.ipynb
 
-# Local agent tooling
-.opencode/
-.playwright-mcp/
-colab-header-snapshot.yml
-colab-notebook-snapshot.yml
-opencode.json
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
 
-# Raw evidence stays in Drive/Colab until the guarded final export (C29).
-# Day checkpoint results under reports/checkpoints/ are tracked as evidence.
-# Full-project JSON outputs (final export manifest + assessment results) are tracked.
-reports/*
-!reports/checkpoints/
-!reports/submission_manifest.json
-!reports/assessment_results.json
-
-# Export archives
+# Temporary learner evidence and export archives
+reports/checkpoints/*
+!reports/checkpoints/.gitignore
 rafeeq-mini-submission.zip
 
 # Build and cache output
@@ -52,8 +37,3 @@ build/
 .cache/
 coverage/
 .rafeeq-mini/
-
-# Local learner drafts (not part of the submission)
-تقرير_رفيق_ميني.md
-أهم_دروس_اليوم_الثاني_رفيق_ميني.docx
-الملخص_الشامل_دورة_رفيق_ميني.docx

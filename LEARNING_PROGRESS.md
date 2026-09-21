@@ -62,7 +62,28 @@
 
 ## Day 3 · اليوم الثالث — Security, proving & export
 
-- **Status · الحالة:** ⬜ PENDING / قيد التنفيذ
-- **Gate · البوابة:** `C29_EXPORT_SAFETY_CHECK`
+- **Status · الحالة:** ✅ PASSED / مجتاز — **READY**
+- **Gate · البوابة:** `C29_EXPORT_SAFETY_CHECK` (+ `C28_READINESS`)
+- **Result · النتيجة:** `ready = true` — `all_passed = true` · `learner_checks: 11–14 ✅` · `FINAL_EXPORT_CREATED`
+- **Learner TODOs:** TODO 11 (threat-model + attack suite), TODO 12 (guard fix + regression), TODO 13 (optimization with guardrail), TODO 14 (export review) — all complete.
+- **Assessment run:** `run-68643c9545a84b47` · **Export:** `export-d00ab0a4431be69e`
+- **Evidence · الأدلة:**
+  - [`reports/checkpoints/day3_results.json`](reports/checkpoints/day3_results.json)
+  - [`reports/checkpoints/day3_security_retest.json`](reports/checkpoints/day3_security_retest.json)
+  - [`reports/checkpoints/learner_todo_status.json`](reports/checkpoints/learner_todo_status.json)
+  - [`reports/assessment_results.json`](reports/assessment_results.json)
+  - [`reports/submission_manifest.json`](reports/submission_manifest.json)
 
-_To be completed at the Day 3 gate._
+| Check · الفحص | Result · النتيجة |
+|---|---|
+| Baseline retest (C23) | ✅ 8/8 |
+| Adversarial retest `L-SEC-09` (C23) | ✅ weak baseline exposed → repaired guard passed |
+| Reflection audit (C24) | ✅ low-impact 0 · high-impact 1 |
+| Trace evaluation (C25) | ✅ 214 redacted events |
+| One optimization (C26) | ✅ `current_policy_cache` · 500 iterations · 1.666 ms → 0.223 ms |
+| Scorecard (C27) | ✅ functional 8/8 · security 8/8 · 11/11 critical gates |
+| Readiness (C28) | ✅ `READY` — artifacts all present |
+| Export safety check (C29) | ✅ `precheck` 20/20 · `FINAL_EXPORT_CREATED` |
+| Security/Project report + dashboard + trace | ✅ tracked under `reports/` |
+
+**Final result · النتيجة النهائية:** الدورة مكتملة من `C0` حتى `C29` — جميع البوابات والفحوصات ناجحة، والدفتر المنفَّذ (67 خلية) والمشروع الكامل مرفوعان على GitHub.

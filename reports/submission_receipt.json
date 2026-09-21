@@ -1,0 +1,37 @@
+{
+  "assessment": {
+    "path": "reports/assessment_results.json",
+    "sha256": "273dff356107eed4151e11b588048d1653cba738ddebeea4d57bfbbffacbe4eb",
+    "size_bytes": 11917
+  },
+  "assessment_run_id": "run-68643c9545a84b47",
+  "export_id": "export-d00ab0a4431be69e",
+  "generated_at_utc": "2026-09-21T09:21:34.895930+00:00",
+  "manifest": {
+    "path": "reports/submission_manifest.json",
+    "sha256": "c198f365321eecb0be49a8f66fdf6b1d81d0c7bcf135402522422ed3ca41699d",
+    "size_bytes": 19014
+  },
+  "notebook": {
+    "c29_marker": "FINAL_EXPORT_CREATED",
+    "path": "notebooks/Rafeeq_Mini_Capstone.ipynb",
+    "sha256": "bda1ba54c8a52ce0759c98ffb77121cfdde79f65e9ab115c32403ea163eb59cb",
+    "size_bytes": 1058982
+  },
+  "receipt_id": "receipt-e3951955958bb69cccf5e8de",
+  "schema_version": "1.0",
+  "validation": {
+    "all_passed": true,
+    "check_names": [
+      "completed_notebook_structure",
+      "learner_todos_14_of_14",
+      "six_final_outputs",
+      "assessment_critical_gates",
+      "trace_redaction",
+      "submission_manifest",
+      "configured_secret_scan"
+    ],
+    "checks_passed": 7,
+    "validator": "trusted_learner_submission"
+  }
+}

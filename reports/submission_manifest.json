@@ -1,76 +1,18 @@
 {
-  "schema_version": "1.0",
-  "generated_at_utc": "2026-09-21T08:51:24.994741+00:00",
-  "export_id": "export-d00ab0a4431be69e",
+  "all_passed": true,
   "assessment_run_id": "run-68643c9545a84b47",
   "assessment_sha256": "273dff356107eed4151e11b588048d1653cba738ddebeea4d57bfbbffacbe4eb",
-  "expected_final_commit_message": "feat: submit Rafeeq Mini capstone",
   "completed_notebook_upload_required": true,
-  "learner_todo_status": {
-    "schema_version": "1.0",
-    "generated_at_utc": "2026-09-21T08:51:24.693038+00:00",
-    "completed": 14,
-    "total": 14,
-    "all_complete": true,
-    "items": [
-      {
-        "exercise": "TODO-1",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-2",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-3",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-4",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-5",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-6",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-7",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-8",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-9",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-10",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-11",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-12",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-13",
-        "passed": true
-      },
-      {
-        "exercise": "TODO-14",
-        "passed": true
-      }
-    ]
-  },
+  "excluded": [
+    "notebooks/Rafeeq_Mini_Capstone.ipynb (save to GitHub separately)",
+    "reports/submission_receipt.json (created after the notebook is uploaded and validated)",
+    ".env and credentials",
+    "hidden evaluations and instructor material",
+    "database/cache/runtime files",
+    "reports/submission_manifest.json (self-hash intentionally omitted)"
+  ],
+  "expected_final_commit_message": "feat: submit Rafeeq Mini capstone",
+  "export_id": "export-d00ab0a4431be69e",
   "files": [
     {
       "path": ".env.example",
@@ -553,36 +495,95 @@
       "size_bytes": 930
     }
   ],
+  "generated_at_utc": "2026-09-21T08:51:24.994741+00:00",
+  "learner_todo_status": {
+    "all_complete": true,
+    "completed": 14,
+    "generated_at_utc": "2026-09-21T08:51:24.693038+00:00",
+    "items": [
+      {
+        "exercise": "TODO-1",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-2",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-3",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-4",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-5",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-6",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-7",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-8",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-9",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-10",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-11",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-12",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-13",
+        "passed": true
+      },
+      {
+        "exercise": "TODO-14",
+        "passed": true
+      }
+    ],
+    "schema_version": "1.0",
+    "total": 14
+  },
   "safety_checks": {
-    "required_outputs_present": true,
-    "configured_secret_scan_no_match": true,
-    "forbidden_paths_absent": true,
-    "critical_gates_passed": true,
-    "trace_redacted": true,
-    "reports_complete": true,
-    "individual_file_size_limit": true,
-    "notebook_excluded_from_manifest_hash": true,
-    "manual_notebook_upload_required": true,
-    "notebook_bound_by_submission_receipt": true,
-    "submission_receipt_required": true,
-    "student_submission_ci_installed": true,
     "canonical_precheck_passed": true,
+    "configured_secret_scan_no_match": true,
+    "critical_gates_passed": true,
+    "forbidden_paths_absent": true,
+    "individual_file_size_limit": true,
     "learner_checks_complete": true,
     "learner_todo_status_valid": true,
+    "learner_todos_14_of_14": true,
     "manual_notebook_step_acknowledged": true,
+    "manual_notebook_upload_required": true,
+    "notebook_bound_by_submission_receipt": true,
+    "notebook_excluded_from_manifest_hash": true,
+    "public_allowlist_nonempty": true,
+    "reports_complete": true,
+    "required_outputs_present": true,
+    "student_submission_ci_installed": true,
+    "submission_receipt_required": true,
     "submission_validator_present": true,
     "submission_workflow_exact": true,
     "submission_workflow_included_once": true,
-    "public_allowlist_nonempty": true
+    "trace_redacted": true
   },
-  "all_passed": true,
-  "excluded": [
-    "notebooks/Rafeeq_Mini_Capstone.ipynb (save to GitHub separately)",
-    "reports/submission_receipt.json (created after the notebook is uploaded and validated)",
-    ".env and credentials",
-    "hidden evaluations and instructor material",
-    "database/cache/runtime files",
-    "reports/submission_manifest.json (self-hash intentionally omitted)"
-  ],
+  "schema_version": "1.0",
   "secret_scan_statement": "No match was found by the configured checks; this is not proof that no secret exists."
 }
