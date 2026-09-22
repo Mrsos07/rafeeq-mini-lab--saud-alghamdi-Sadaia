@@ -56,8 +56,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "c2dd8d0d0a797b51b6d8740efa92c9923eba5e6785e374b68a6e50a57fe4977a",
-      "size_bytes": 7619
+      "sha256": "9ea86cd4f17fd17e9b31dc7f74e530cff8669342bc8dca15e56191e24017ce47",
+      "size_bytes": 7643
     },
     {
       "path": "SECURITY.md",
@@ -520,7 +520,7 @@
       "size_bytes": 930
     }
   ],
-  "generated_at_utc": "2026-09-22T09:38:52.287913+00:00",
+  "generated_at_utc": "2026-09-22T09:59:15.341489+00:00",
   "learner_todo_status": {
     "all_complete": true,
     "completed": 14,

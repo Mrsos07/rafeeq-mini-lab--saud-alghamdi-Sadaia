@@ -6,10 +6,10 @@
   },
   "assessment_run_id": "run-68643c9545a84b47",
   "export_id": "export-d00ab0a4431be69e",
-  "generated_at_utc": "2026-09-22T09:40:32.549695+00:00",
+  "generated_at_utc": "2026-09-22T09:59:27.422591+00:00",
   "manifest": {
     "path": "reports/submission_manifest.json",
-    "sha256": "0ae27094d606927e337a339ee47f27864343213851f880013810961b36d1add4",
+    "sha256": "632e0ac363b6add35c51c97a59eea97b58806de50a1fae28a8c6254fad4fbd22",
     "size_bytes": 20090
   },
   "notebook": {
@@ -18,7 +18,7 @@
     "sha256": "8d8bdff173c6a32b672cf6ac30fc1dc991347d464edfa8612a75a78a0d168778",
     "size_bytes": 1058985
   },
-  "receipt_id": "receipt-b360b1763ad5c93ffa3d3e7a",
+  "receipt_id": "receipt-78769806f5401c9bcbc8acb6",
   "schema_version": "1.0",
   "validation": {
     "all_passed": true,
