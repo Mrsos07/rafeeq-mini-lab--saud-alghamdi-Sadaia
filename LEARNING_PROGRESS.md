@@ -19,8 +19,7 @@
 - **Result · النتيجة:** `all_passed = true` — `public_tests_passed: true` · `learner_checks: 1–5 ✅`
 - **Learner TODOs:** TODO 1 (architecture decision), TODO 2 (typed state), TODO 3 (bounded stop), TODO 4 (react cycle), TODO 5 (tool schema) — all complete.
 - **Evidence · الأدلة:**
-  - [`reports/checkpoints/day1_results.json`](reports/checkpoints/day1_results.json)
-  - [`reports/checkpoints/doctor_report.json`](reports/checkpoints/doctor_report.json)
+  - [`reports/assessment_results.json`](reports/assessment_results.json) — `learning_gates.day1_gate = true`
 
 | Check · الفحص | Result · النتيجة |
 |---|---|
@@ -42,8 +41,7 @@
 - **Result · النتيجة:** `all_passed = true` — `public_tests_passed: true` · `learner_checks: 6–10 ✅`
 - **Learner TODOs:** TODO 6 (session summary), TODO 7 (scoped learner memory filter), TODO 8 (policy query + filters), TODO 9 (typed delegation), TODO 10 (refund policy gates) — all complete.
 - **Evidence · الأدلة:**
-  - [`reports/checkpoints/day2_results.json`](reports/checkpoints/day2_results.json)
-  - [`reports/checkpoints/day2_memory_results.json`](reports/checkpoints/day2_memory_results.json)
+  - [`reports/assessment_results.json`](reports/assessment_results.json) — `learning_gates.day2_gate = true`
 
 | Check · الفحص | Result · النتيجة |
 |---|---|
@@ -68,10 +66,8 @@
 - **Learner TODOs:** TODO 11 (threat-model + attack suite), TODO 12 (guard fix + regression), TODO 13 (optimization with guardrail), TODO 14 (export review) — all complete.
 - **Assessment run:** `run-68643c9545a84b47` · **Export:** `export-d00ab0a4431be69e`
 - **Evidence · الأدلة:**
-  - [`reports/checkpoints/day3_results.json`](reports/checkpoints/day3_results.json)
-  - [`reports/checkpoints/day3_security_retest.json`](reports/checkpoints/day3_security_retest.json)
-  - [`reports/checkpoints/learner_todo_status.json`](reports/checkpoints/learner_todo_status.json)
   - [`reports/assessment_results.json`](reports/assessment_results.json)
+  - [`reports/SECURITY_ASSESSMENT.md`](reports/SECURITY_ASSESSMENT.md)
   - [`reports/submission_manifest.json`](reports/submission_manifest.json)
 
 | Check · الفحص | Result · النتيجة |

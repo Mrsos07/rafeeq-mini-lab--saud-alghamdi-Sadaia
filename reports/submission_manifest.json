@@ -56,8 +56,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "689d3949ba3843b9b15c544da96e2f4d924c048f53cf5bcd3ddfe1a8ad708b1d",
-      "size_bytes": 25379
+      "sha256": "c2dd8d0d0a797b51b6d8740efa92c9923eba5e6785e374b68a6e50a57fe4977a",
+      "size_bytes": 7619
     },
     {
       "path": "SECURITY.md",
@@ -105,9 +105,19 @@
       "size_bytes": 3427
     },
     {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "46a90140e9f4d3156018b24949df23e7fdccdb28f647fbd5c89a9cc270607467",
+      "size_bytes": 5942
+    },
+    {
       "path": "docs/ASSESSMENT_RUBRIC.md",
       "sha256": "e37e6128f4127dec6165ced3118d3a888ea505d1f0c5280b24b54bf84311335f",
       "size_bytes": 13789
+    },
+    {
+      "path": "docs/CI_STATUS.md",
+      "sha256": "535b6fc2d94ba027cafb3abfac500942ffc9d17773b4b5a410328ae623b0125c",
+      "size_bytes": 6060
     },
     {
       "path": "docs/LAB_VS_PRODUCTION.md",
@@ -120,9 +130,24 @@
       "size_bytes": 2508
     },
     {
+      "path": "docs/NOTEBOOK_MAP.md",
+      "sha256": "e586c043cb1ec0dac55c1a05538ca5c197debc7cb73abcd76fa5ab08612770a1",
+      "size_bytes": 6311
+    },
+    {
       "path": "docs/RELEASE_ACCEPTANCE.md",
       "sha256": "5bdb2de8c76d0cb20cb4b2440882b6c1ffef58e7343c0f767d5c04c415f53e9a",
       "size_bytes": 4249
+    },
+    {
+      "path": "docs/REPORTS_AND_EVIDENCE.md",
+      "sha256": "9daf3efabd587c13e74987ddb668711733eb1a1034ebb15ad9f4c80c2143a746",
+      "size_bytes": 3962
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "sha256": "ef4ee2d3338613fead3c055fc102bb3a0c9f667c9129634f4589576910f7d3a1",
+      "size_bytes": 3828
     },
     {
       "path": "docs/SDAIA_ADMIN_REQUIREMENTS.md",
@@ -196,8 +221,8 @@
     },
     {
       "path": "reports/PROJECT_REPORT.md",
-      "sha256": "35db0ab6a9c5c56b8bd0d1d060d94b8cc683b80679ea9d8e0c72b3a0b86c1369",
-      "size_bytes": 4154
+      "sha256": "24b8df5f1e97c371cc0b152820105c63dd0e0946cef2df535f8e3d5378c61a73",
+      "size_bytes": 9596
     },
     {
       "path": "reports/SECURITY_ASSESSMENT.md",
@@ -495,7 +520,7 @@
       "size_bytes": 930
     }
   ],
-  "generated_at_utc": "2026-09-21T08:51:24.994741+00:00",
+  "generated_at_utc": "2026-09-22T09:38:52.287913+00:00",
   "learner_todo_status": {
     "all_complete": true,
     "completed": 14,
@@ -562,26 +587,18 @@
     "total": 14
   },
   "safety_checks": {
-    "canonical_precheck_passed": true,
     "configured_secret_scan_no_match": true,
     "critical_gates_passed": true,
     "forbidden_paths_absent": true,
     "individual_file_size_limit": true,
-    "learner_checks_complete": true,
-    "learner_todo_status_valid": true,
     "learner_todos_14_of_14": true,
-    "manual_notebook_step_acknowledged": true,
     "manual_notebook_upload_required": true,
     "notebook_bound_by_submission_receipt": true,
     "notebook_excluded_from_manifest_hash": true,
-    "public_allowlist_nonempty": true,
     "reports_complete": true,
     "required_outputs_present": true,
     "student_submission_ci_installed": true,
     "submission_receipt_required": true,
-    "submission_validator_present": true,
-    "submission_workflow_exact": true,
-    "submission_workflow_included_once": true,
     "trace_redacted": true
   },
   "schema_version": "1.0",
